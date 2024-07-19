@@ -1,0 +1,204 @@
+:root {
+    --linear-gradient-1: linear-gradient(45deg, #12d8df, #12a5df, #127cdf);
+}
+
+
+@font-face {
+    font-family: alkatra;
+    src: url(/fonts/alkatra.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    background-color: #c4f6f7;
+    color: white;
+    text-align: center;
+}
+
+.title {
+    font-size: 6rem;
+    font-family: alkatra;
+    background: linear-gradient(90deg, #12d8df, #12a5df, #4912df);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.board {
+    width: 60vmin;
+    height: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 18vmin;
+    height: 18vmin;
+    background: var(--linear-gradient-1);
+    margin: .5rem;
+    font-family: alkatra;
+    font-size: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    padding-top: 1rem;
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-in;
+    
+}
+
+.reset-btn {
+    padding: 1rem 2rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: white;
+    font-family: alkatra;
+    border: none;
+    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.3);
+    background: var(--linear-gradient-1);
+    border-radius: 2rem;
+}
+
+.popup {
+    width: 50vw;
+    height: 40vh;
+    display: none;
+    background: var(--linear-gradient-1);
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    transition: all .5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.close {
+    text-align: right;
+    padding: 1rem;
+}
+
+.close img {
+    width: 1.5rem;
+}
+
+.cong {
+    font-family: alkatra;
+    font-size: 5rem;
+}
+
+.winner {
+    font-family: alkatra;
+    font-size: 3rem;
+}
+
+/* Responsive Code */
+/* minimum 2000px width is required for this style to applied not less then 2000px */
+@media (min-width: 2000px) {
+    .title {
+        font-size: 14rem;
+    }
+
+    .box {
+        font-size: 12rem;
+    }
+    
+    .reset-btn {
+        font-size: 6rem;
+        padding: 2rem 4rem;
+    }
+}
+
+/* maximum 800px width is required for this style to applied not more then 800px */
+@media (max-width: 800px) {
+    .container {
+        margin-top: -20px;
+    }
+
+    .board {
+        width: 70vmin;
+        height: 70vmin;
+    }
+
+    .popup{
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .cong {
+        font-size: 3.5rem;
+    }
+    .winner {
+        font-size: 2rem;
+    }
+}
+
+/* maximum 500px width is required for this style to applied not more then 500px */
+@media (max-width: 500px) {
+    .container {
+        margin-top: -20px;
+    }
+
+    .board {
+        width: 70vmin;
+        height: 70vmin;
+    }
+
+    .popup{
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .cong {
+        font-size: 3.5rem;
+    }
+    .winner {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .title {
+        font-size: 5rem;
+    }
+    .box {
+        font-size: 4rem;
+    }
+
+    .popup{
+        width: 80vw;
+        height: 40vw;
+    }
+
+    .cong {
+        font-size: 2.5rem;
+    }
+
+    .reset-btn {
+        padding: .5rem 1rem
+    }
+}
